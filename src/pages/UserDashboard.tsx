@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Container, Row, Col, Card, Button, Table, Badge, Nav, Tab } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 
 interface UserDashboardProps {
   onLogout: () => void;
@@ -93,14 +94,14 @@ const UserDashboard = ({ onLogout }: UserDashboardProps) => {
                   <h2 className="dashboard-title">Dashboard</h2>
                   <div>
                     <span className="me-2">Welcome back, {user.name}</span>
-                    <Button 
-                      as={Link} 
-                      to="/collections" 
-                      variant="outline-dark" 
-                      size="sm"
-                    >
-                      Shop Now
-                    </Button>
+                    <LinkContainer to="/collections">
+                      <Button 
+                        variant="outline-dark" 
+                        size="sm"
+                      >
+                        Shop Now
+                      </Button>
+                    </LinkContainer>
                   </div>
                 </div>
                 

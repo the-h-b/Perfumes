@@ -1,5 +1,5 @@
 import { Container, Row, Col, Button, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { LinkContainer } from 'react-router-bootstrap';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -44,14 +44,14 @@ const LandingPage = () => {
         <Container className="hero-content">
           <h1 className="hero-title">Discover Your Signature Scent</h1>
           <p className="hero-subtitle">Handcrafted luxury perfumes that tell your unique story</p>
-          <Button 
-            as={Link} 
-            to="/collections" 
-            className="btn-gold px-4 py-2"
-            style={{ fontSize: '1.1rem' }}
-          >
-            Explore Collections
-          </Button>
+          <LinkContainer to="/collections">
+            <Button 
+              className="btn-gold px-4 py-2"
+              style={{ fontSize: '1.1rem' }}
+            >
+              Explore Collections
+            </Button>
+          </LinkContainer>
         </Container>
       </section>
       
@@ -77,13 +77,13 @@ const LandingPage = () => {
             ))}
           </Row>
           <div className="text-center mt-4">
-            <Button 
-              as={Link} 
-              to="/collections" 
-              className="btn-outline-gold px-4 py-2"
-            >
-              View All Collections
-            </Button>
+            <LinkContainer to="/collections">
+              <Button 
+                className="btn-outline-gold px-4 py-2"
+              >
+                View All Collections
+              </Button>
+            </LinkContainer>
           </div>
         </Container>
       </section>
@@ -111,13 +111,13 @@ const LandingPage = () => {
                 Each perfume is meticulously crafted using the finest ingredients sourced from around the world. 
                 Our master perfumers blend art and science to create fragrances that are both timeless and contemporary.
               </p>
-              <Button 
-                as={Link} 
-                to="/our-story" 
-                className="btn-outline-gold"
-              >
-                Learn More
-              </Button>
+              <LinkContainer to="/our-story">
+                <Button 
+                  className="btn-outline-gold"
+                >
+                  Learn More
+                </Button>
+              </LinkContainer>
             </Col>
           </Row>
         </Container>
@@ -144,14 +144,14 @@ const LandingPage = () => {
                   style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
                 >
                   <h3 className="text-white mb-3">For Her</h3>
-                  <Button 
-                    as={Link} 
-                    to="/collections/women" 
-                    className="btn-outline-gold"
-                    style={{ borderColor: 'var(--white)', color: 'var(--white)' }}
-                  >
-                    Explore
-                  </Button>
+                  <LinkContainer to="/collections/women">
+                    <Button 
+                      className="btn-outline-gold"
+                      style={{ borderColor: 'var(--white)', color: 'var(--white)' }}
+                    >
+                      Explore
+                    </Button>
+                  </LinkContainer>
                 </div>
               </div>
             </Col>
@@ -171,14 +171,14 @@ const LandingPage = () => {
                   style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
                 >
                   <h3 className="text-white mb-3">For Him</h3>
-                  <Button 
-                    as={Link} 
-                    to="/collections/men" 
-                    className="btn-outline-gold"
-                    style={{ borderColor: 'var(--white)', color: 'var(--white)' }}
-                  >
-                    Explore
-                  </Button>
+                  <LinkContainer to="/collections/men">
+                    <Button 
+                      className="btn-outline-gold"
+                      style={{ borderColor: 'var(--white)', color: 'var(--white)' }}
+                    >
+                      Explore
+                    </Button>
+                  </LinkContainer>
                 </div>
               </div>
             </Col>
@@ -198,14 +198,14 @@ const LandingPage = () => {
                   style={{ backgroundColor: 'rgba(0, 0, 0, 0.4)' }}
                 >
                   <h3 className="text-white mb-3">Unisex</h3>
-                  <Button 
-                    as={Link} 
-                    to="/collections/unisex" 
-                    className="btn-outline-gold"
-                    style={{ borderColor: 'var(--white)', color: 'var(--white)' }}
-                  >
-                    Explore
-                  </Button>
+                  <LinkContainer to="/collections/unisex">
+                    <Button 
+                      className="btn-outline-gold"
+                      style={{ borderColor: 'var(--white)', color: 'var(--white)' }}
+                    >
+                      Explore
+                    </Button>
+                  </LinkContainer>
                 </div>
               </div>
             </Col>
